@@ -1,13 +1,11 @@
 package main
 
-import "fmt"
-
-func factorialIteration (factNumber int){
+func factorialIteration (factNumber int) int{
 	factResult := 1
 	for i := 1; i<=factNumber; i++{
 		factResult = factResult * i
 	}
-	fmt.Println(factResult)
+	return factResult
 }
 
 func factorialRecurs(factNumber int) int {
@@ -23,7 +21,7 @@ func factorialRecurs(factNumber int) int {
 
 func main() {
 	number := 6
-	factorialIteration(number)
+	println(factorialIteration(number))
 	println(factorialRecurs(number))
 	//factorialRecurs(number)
 }
